@@ -8,4 +8,9 @@ public class ParanthesesChecker {
 //  Post-condition: Given a String s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 }
 
-public static void main 
+public static void main (String [] args)
+int i = 1
+while (int i = )
+
+
+if 
