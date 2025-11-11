@@ -21,35 +21,29 @@ public class ParanthesesChecker {
         parantheses = scanner.nextLine();{
 
         System.out.println(); }
-
-
-        if (parantheses.equals("(){}[]"));{
-        System.out.println("valid");
-        }
-
-        if (parantheses.equals("(([]){})"));{
-        System.out.println("valid");
-        }
-
-        if (parantheses.equals("([{({})}])")); {
-        System.out.println("valid");
-        }
-        
-
-        if (parantheses.equals("(]"));{
-            System.out.println("invalid");
-        }
-        
-        if (parantheses.equals("{}[())()(]"));{
-        System.out.println("invalid");
-        }
-
-        if (parantheses.equals("(){}{"));{
-        System.out.println("invalid");
-        }
         
     }
+
+    public static boolean isValid(String s){   //loop through the string
+       String parantheses;
+       for (int s = 0; s < parantheses.length(); s++) {
+       char character = parantheses.charAt(s);
+    System.out.println(character);
+
+     
+        // find the last opening symbol either { ( [
+
+        
+
+    }
 }
+}
+
+
+// one other approach : find the last either opening parantheses ( { [  ////  "()" 0,1 lenght
+//then look at the symbol directly to its right. 
+//If they match, remove both and repeat. 
+//If your string is empty it's valid. 
 
 
 //System.out.println(isValid("(){}[]")); //true.
