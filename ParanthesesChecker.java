@@ -5,7 +5,7 @@
 import java.util.*;
 
 public class ParanthesesChecker {
-//  Pre-condition: User can only input  '(', ')', '{', '}', '[' and ']'. 
+//  Pre-condition: User can only input  '(', ')', '{', '}', '[' and ']'. The amount of characters typed in the input should be an even number. 
 //  Post-condition: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order. Every close bracket has a corresponding open bracket of the same type.
     
 /**
@@ -18,28 +18,41 @@ public class ParanthesesChecker {
 
         // Enter parantheses and press Enter
         System.out.println("Input parantheses");
-        parantheses = scanner.nextLine();{
+        parantheses = scanner.nextLine();
 
-        System.out.println(); }
-        
+        boolean validOrNot = isValid(parantheses);
+        if (validOrNot){
+            System.out.println("valid");
+        }
+        else {
+            System.out.println("invalid"); 
+        }
     }
-
     public static boolean isValid(String s){   //loop through the string
-       String parantheses;
-       for (int s = 0; s < parantheses.length(); s++) {
-       char character = parantheses.charAt(s);
-    System.out.println(character);
+       
+         while (s.contains("()" )|| s.contains("{}") || s.contains ("[]"));
+         if (s.contains("()")) {
+            s = s.replace("()", "");
+        }
+        if (s.contains("[]")) {
+            s = s.replace("[]", "");
+        }
+        if (s.contains("{}")) {
+            s = s.replace("{}", "");
+        }
+    
+        return s.isEmpty();
+    }
+      
+}
+       
 
      
         // find the last opening symbol either { ( [
 
         
 
-    }
-}
-}
-
-
+  
 // one other approach : find the last either opening parantheses ( { [  ////  "()" 0,1 lenght
 //then look at the symbol directly to its right. 
 //If they match, remove both and repeat. 
