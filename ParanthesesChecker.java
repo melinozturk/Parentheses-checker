@@ -30,7 +30,9 @@ public class ParanthesesChecker {
     }
     public static boolean isValid(String s){   //loop through the string
        
-         while (s.contains("()" )|| s.contains("{}") || s.contains ("[]"));
+         while (s.contains("()" )|| s.contains("{}") || s.contains ("[]")){
+
+         
          if (s.contains("()")) {
             s = s.replace("()", "");
         }
@@ -40,7 +42,7 @@ public class ParanthesesChecker {
         if (s.contains("{}")) {
             s = s.replace("{}", "");
         }
-    
+    }
         return s.isEmpty();
     }
       
